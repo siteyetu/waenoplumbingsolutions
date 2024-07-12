@@ -2,7 +2,7 @@ APScheduler==3.8.1
 backports.zoneinfo==0.2.1
 click==8.0.3
 cycler==0.11.0
-dataclasses==0.8
+#dataclasses==0.8
 Flask==1.1.0
 flask-mongoengine==0.9.1
 Flask-Script==1.0.0
