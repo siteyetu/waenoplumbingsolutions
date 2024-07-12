@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('fonts/icons.eot?f5ynso');
+  src:  url('fonts/icons.eot?f5ynso#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?f5ynso') format('truetype'),
+    url('fonts/icons.woff?f5ynso') format('woff'),
+    url('fonts/icons.svg?f5ynso#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon"], [class*=" icon"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconfacebook:before {
+  content: "\e901";
+}
+.iconfaucet:before {
+  content: "\e902";
+}
+.iconinstagram:before {
+  content: "\e903";
+}
+.iconlight-bulb:before {
+  content: "\e904";
+}
+.iconpipes:before {
+  content: "\e905";
+}
+.iconplumber:before {
+  content: "\e906";
+}
+.icontwitter-svgrepo-com:before {
+  content: "\e907";
+}
+.iconuser:before {
+  content: "\e908";
+}
+.iconwhatsap:before {
+  content: "\e909";
+}

@@ -1,0 +1,533 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    min-height: 550px;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('../aboutUs/aboutImg/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    background-attachment: fixed;
+    color: #000;
+}
+
+.header-line{
+    height: 130px;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+}
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 15px 0 15px;
+    box-shadow: 0 0 0;
+}
+.side-bar{
+  min-height: 450px;
+  width: 100%;
+  background: #fff;
+  position: absolute;
+  z-index: 3;
+  padding: 30px 30px 10px 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -100%;
+  transition: 0.5s;
+  opacity: 0;
+}
+.side-bar.active{
+  top: 0;
+  opacity: 1;
+  z-index: 4;
+}
+.side-bar_top{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.clouse-btn{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  transition: 0.7s;
+}
+.clouse-btn:hover{
+  transform: rotate(540deg);
+}
+.clouse-btn::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #000;
+  top: 50%;
+  transform: rotate(45deg);
+}
+.clouse-btn::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #000;
+  top: 50%;
+  transform: rotate(-45deg);
+}
+.burger-menu{
+    margin-top: 40px;
+}
+.burger-menu-item{
+    margin-bottom: 40px;
+}
+.burger-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-direction: column;
+}
+.burger-menu-item{
+    font-size: 19px;
+    font-family: gilroy;
+}
+
+
+
+.header_top{
+    padding: 30px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 120px;
+    height: 95px;
+}
+.logo-link{
+    z-index: 1;
+}
+.header-menu{
+    display: flex;
+    list-style: none;
+    font-family: gilroy;
+    letter-spacing: 4px;
+    font-weight: 700;
+    align-items: center;
+}
+
+.header-menu_item{
+    margin-right: 32px;
+    transition:0.5s;
+}
+.header-menu_link{
+    text-decoration: none;
+    color: #000;
+    font-size: calc(9px + 4 * (110vw / 1670));
+}
+.header-menu_link{
+    position: relative;
+}
+.header-menu_link::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    transition: 0.5s;
+    background: #FF4500;
+    bottom: -70%;
+}
+.header-menu_link:hover::before{
+    width: 100%;
+    height: 2px;
+}
+.active-link:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #FF4500;
+    bottom: -70%;
+    border-radius: 5px;
+}
+.menu-burger{
+    display: none;
+}
+.menu-burger{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+    z-index: 10;
+}
+.menu-burger.active{
+    display: none;
+}
+.burger-item{
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    background: #000;
+    display: block;
+}
+.menu-burger::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    top: 25%;
+    background: #000;
+}
+.menu-burger::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    bottom: 40%;
+    background: #000;
+}
+@media(max-width:750px){
+    .menu-burger{
+        display: block;
+    }
+    .header-menu_item{
+        display: none;
+    }
+}
+
+.header-content{
+    text-align: center;
+    color: #fff;
+    font-family: gilroy;
+    padding: 0 0 20% 0;
+}
+.header-name{
+    margin-top: 3%;
+}
+.header-title{
+    font-size: calc(15px + 35 * (100vw / 1670));
+    margin-top: 6%;
+    letter-spacing: 3px;
+    transform: translateX(-20%);
+    transition: 0.9s;
+}
+.header-title._active{
+    transform: translateX(0);
+}
+.title-item{
+    height: 0;
+    transition: 0.7s;
+    opacity: 0;
+    transform: translateX(-60px);
+    letter-spacing: 3px;
+}
+.title-item._active{
+    opacity: 1;
+    transform: translateX(0);
+}
+.item2{
+    transition-delay: 0.3s;
+}
+.item3{
+    transition-delay: 0.7s;
+    color: #FF4500;
+}
+
+.content {
+    display: flex; /* делаем колонки в ряд */
+    align-items: center; /* выравниваем по центру */
+    justify-content: space-between; /* колонки растянутся на всю ширину */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px 6px rgba(34, 60, 80, 0.1);
+    transform: translateX(50%);
+    opacity: 0;
+    transition: 0.9s;
+  }
+  .content._active{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .form-val{
+    min-height: 600px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 40px 0 40px 0;
+    font-family: gilroy;
+  }
+  
+  /* Стили левой колонки */
+  .left-side {
+    width: 25%; /* занимает 25% общей ширины */
+    height: 100%; /* растягиваем на всю высоту */
+    position: relative; /* позиционирование относительное (для ::before) */
+    display: flex;
+    flex-direction: column; /* внутри элементы располагаем в колонку */
+  }
+  
+  /* Стили разделительной линии между левой и правой колонкой */
+  .left-side::before {
+    content: ""; /* контент нам не нужен */
+    position: absolute; /* позиционируем относительно .left-side */
+    height: 70%; /* высота 70% от .left-side */
+    width: 2px; /* ширина 2px */
+    background: #FF4500;
+    right: -15px; /* позиционируем справа + отступ 15px (справа) */
+    top: 50%; /* выравниваем по центру */
+    transform: translateY(-50%); /* выравниваем по центру */
+  }
+  .topic{
+    color: #FF4500;
+  }
+  /* Стили правой колонки */
+  .right-side {
+    width: 75%; /* занимает 75% общей ширины */
+    margin-left: 75px;
+  }
+  
+  /* Элементы левой колонки: адрес, телефон, email */
+  .details {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Общие стили для иконок */
+  .details i {
+    font-size: 25px; /* задаем размер */
+    color: #3e2093; /* задаем цвет */
+    margin-bottom: 10px;
+  }
+  
+  /* Стили для заголовков левой колонки */
+  .topic {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 7px; /* отступ снизу 7px */
+  }
+  
+  /* Стили для текста левой колонки */
+  .text-one,
+  .text-two {
+    font-size: 14px;
+    color: #afafb6;
+    margin-bottom: 3px;
+  }
+  .input-box label{
+    font-size: 14px;
+    color: #afafb6;
+    padding-left: 5px;
+  }
+  
+  /* Заголовок правой колонки */
+  .topic-text {
+    font-size: 23px;
+    font-weight: 600;
+    color: #FF4500;
+    margin-bottom: 10px;
+  }
+  
+  /* Текст правой колонки */
+  .right-side p {
+    margin-bottom: 20px;
+  }
+  
+  /* Контейнер для input'ов формы */
+  .input-box {
+    height: 50px; /* по сути задаем высоту input'а */
+    width: 100%; /* ширина на всю ширину правой колонки (с учетом padding) */
+    margin-bottom: 30px; /* отступаем снизу 20px */
+  }
+  
+  /* Стили для input и textarea (поле сообщение) */
+  .input-box input,
+  .input-box textarea {
+    height: 100%; /* растягиваем на всю высоту контейнера 50px */
+    width: 100%; /* растягиваем на всю ширину */
+    border: none; /* убираем внешние края */
+    border-radius: 5px; /* скругляем края */
+    background: #f0f1f8; /* задаем цвет фона */
+    padding: 0 20px; /* отступ справа и слева 20px */
+  }
+  
+  /* Отдельно стилизуем поле сообщение */
+  .input-box textarea {
+    resize: none; /* чтобы нельзя было менять высоту */
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  /* Это контейнер для поля сообщение */
+  .message-box {
+    min-height: 110px; /* минимальная высота 110px */
+  }
+  
+  /* Стили для контейнера кнопки */
+  .button {
+    display: inline-block;
+  }
+  
+  /* Стили для самой кнопки */
+  .button input[type="submit"] {
+    color: #fff;
+    font-size: 18px;
+    background: #FF4500;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    transition: 0.4s; /* чтобы плавно менялся цвет при наведении (:hover) */
+    cursor: pointer;
+  }
+  
+  /* Меняем цвет фона при наведении на кнопку */
+  .button input[type="submit"]:hover {
+    background: #767676;
+  }
+
+  @media (max-width: 800px) {
+    /* Теперь форма (правая колонка) будет сверху, а элементы (левая колонка) снизу */
+    .content {
+      height: 100%;
+      flex-direction: column-reverse; /* располагаем в колонку и реверсивно */
+    }
+  
+    /* Внутри левой колонки внутренние элементы располагаем в ряд */
+    .left-side {
+      margin-top: 50px;
+      flex-direction: row; /* располагаем элементы (адрес, телефон, email) в ряд */
+      width: 100%; /* левая колонка на всю ширину */
+      justify-content: center;
+      flex-wrap: wrap; /* перенос элементов, если не хватит места */
+    }
+    .details {
+      margin-right: 20px;
+    }
+    .details:last-child {
+      margin-right: 0;
+    }
+  
+    /* Убираем разделительную линию */
+    .left-side::before {
+      display: none;
+    }
+  
+    /* Правая колонка теперь на всю ширину и не имеет отступа слева */
+    .right-side {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+
+  .map-section{
+    background: rgba(0, 0, 0, 0.9);
+    min-height: 600px;
+}
+iframe{
+    max-width: 600px;
+    height: 320px;
+    border-radius: 18px;
+    margin-left: 10px;
+}
+.section-map{
+    width: 100%;
+    display: flex;
+    padding: 40px 0 0 0;
+    justify-content: space-between;
+}
+.map-informayion{
+    display: flex;
+    justify-content: space-between;
+}
+.contact{
+    max-width: 310px;
+    list-style: none;
+    font-size: 18px;
+    font-family: gilroy;
+    padding: 10px 0 5px 10px;
+    color: #fff;
+    letter-spacing: 2px;
+    border-radius: 7px;
+}
+.contact-item{
+    margin-bottom: 10%;
+}
+.contact-details{
+    color: #D2691E;
+}
+.map-description{
+    max-width: 340px;
+    font-size: 17px;
+    font-family: gilroy;
+    color: #fff;
+    padding: 20px 10px 10px 10px;
+}
+.description-titel{
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #D2691E;
+}
+.description-text{
+    margin-bottom: 10%;
+    letter-spacing: 1.5px;
+}
+.social-link-wrapper{
+    display: flex;
+    list-style: none;
+}
+.social-item{
+    margin-right: 10px;
+}
+.social-link{
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+}
+.social-link img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    transition: 0.3s;
+}
+.social-link:hover img{
+    opacity: 1;
+    transform: translateY(-7px);
+}
+@media(max-width: 969px){
+    .section-map{
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+    iframe{
+        margin-top: 20px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+@media(max-width:580px){
+    .map-informayion{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .description-text{
+        width: 100%;
+    }
+}
+
+
+  
+
+  
