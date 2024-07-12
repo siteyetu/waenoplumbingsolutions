@@ -1,5 +1,7 @@
+wheel
+uwsgi
 APScheduler==3.8.1
-backports.zoneinfo==0.2.1
+#backports.zoneinfo==0.2.1
 click==8.0.3
 cycler==0.11.0
 #dataclasses==0.8
