@@ -7,7 +7,7 @@
 .header{
     width: 100%;
     min-height: 900px;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.6)), url(FirstImg/header-bg2.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.6)), url(FirstImg/header-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
