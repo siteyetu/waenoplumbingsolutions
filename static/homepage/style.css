@@ -336,9 +336,8 @@
         display: block;
     }
 }
-
 /* section services */
-.services{
+.services {
     width: 100%;
     min-height: 500px;
     text-align: center;
@@ -346,78 +345,83 @@
     padding: 30px 0 30px 0;
     overflow: hidden;
 }
-.services-title-top{
+
+.services-title-top {
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: 500;
 }
-.services-title-down{
+
+.services-title-down {
     font-size: calc(30px + 15 * (100vw / 1670));
     letter-spacing: 3px;
     margin-bottom: 5%;
 }
-.services-wrapper{
+
+.services-wrapper {
     height: 600px;
     width: 100%;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
-.services-card{
+
+.services-card {
     height: 100%;
-    max-width: 320px;
+    width: 30%;
     padding: 0 0 15px 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     transform: translateY(30%);
     opacity: 0;
     transition: 0.5s;
 }
-.services-card:nth-child(2){
+
+.services-card:nth-child(2) {
     transition-delay: 0.4s;
 }
-.services-card:nth-child(3){
+
+.services-card:nth-child(3) {
     transition-delay: 0.7s;
 }
-.services-card._active{
+
+.services-card._active {
     transform: translateY(0);
     opacity: 1;
 }
-.services-img-wrapper{
+
+.services-img-wrapper {
     width: 100%;
     height: 60%;
 }
-.services-img{
+
+.services-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.services-card-title{
+
+.services-card-title {
     font-weight: 700;
     letter-spacing: 3px;
     font-size: 19px;
     padding: 8px 0 0 0;
 }
-.services-card-text{
+
+.services-card-text {
     padding: 20px;
 }
-@media(max-width:1019px){
-    .services-wrapper{
-        flex-wrap: wrap;
+
+@media (max-width: 767px) {
+    .services-wrapper {
+        height: auto;
+        flex-direction: column;
     }
-    .services-card{
+
+    .services-card {
+        width: 100%;
+        max-width: none;
         margin-top: 15px;
-        margin-right: 15px;
-        max-width: 45%;
-    }
-}
-@media(max-width:700px){
-    .services-card{
-        max-width: 70%;
         margin-right: 0;
-    }
-}
-@media(max-width:500px){
-    .services-card{
-        max-width: 90%;
     }
 }
 /* section inovate */
